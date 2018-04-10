@@ -1,0 +1,65 @@
+﻿@model Sample.Models.UserIntegration
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>UserIntegration</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.YellowantUserID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.YellowantUserID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.YellowantTeamSubdomain)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.YellowantTeamSubdomain)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IntegrationID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IntegrationID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InvokeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InvokeName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.YellowantIntegrationToken)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.YellowantIntegrationToken)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

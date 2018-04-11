@@ -91,8 +91,10 @@ namespace Sample.Controllers
         [HttpPost]
         public ActionResult Api()
         {
+            String data = Request["data"].ToString();
+            //String command = 
             JObject j = new JObject();
-            j.Add("message_text", "some text");
+            j.Add("message_text", data);
             j.Add("attachments", new JArray());
             return new JSONNetResult(j);
         }

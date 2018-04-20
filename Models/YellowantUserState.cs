@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Data.Entity;
-
+﻿
 namespace Sample.Models
 {
+    /*
+     * This stores the 'state' of user during OAuth cycle of the application. Refer to Yellowant api docs to know
+     * more
+     */ 
     public class YellowantUserState
     {   
         public int ID { get; set; }
@@ -13,8 +12,5 @@ namespace Sample.Models
         public string UserState { get; set; }
 
     }
-    public class YellowantUserStateDbContext : DbContext
-    {
-        public DbSet<YellowantUserState> YellowantUserState { get; set; }
-    }
+    
 }

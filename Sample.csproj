@@ -197,15 +197,24 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="CommandCenter\ButtonCommandsClass.cs" />
+    <Compile Include="CommandCenter\Commands.cs" />
+    <Compile Include="CommandCenter\DefaultReply.cs" />
+    <Compile Include="CommandCenter\HelloYellowAnt.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\UserIntegrationController.cs" />
-    <Compile Include="Controllers\UserIntegrationsOlldController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201804171416441_first.cs" />
+    <Compile Include="Migrations\201804171416441_first.Designer.cs">
+      <DependentUpon>201804171416441_first.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\DefaultConnectionContext.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\UserIntegration.cs" />
@@ -248,6 +257,7 @@
     <Content Include="Scripts\esm\popper.js.map" />
     <Content Include="Scripts\esm\popper-utils.min.js.map" />
     <Content Include="Scripts\esm\popper-utils.js.map" />
+    <Content Include=".gitignore" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -307,11 +317,6 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\UserIntegration\UserIntegration.cshtml" />
     <Content Include="Views\UserIntegration\Integrate.cshtml" />
-    <Content Include="Views\UserIntegrationsOld2\Create.cshtml" />
-    <Content Include="Views\UserIntegrationsOld2\Delete.cshtml" />
-    <Content Include="Views\UserIntegrationsOld2\Details.cshtml" />
-    <Content Include="Views\UserIntegrationsOld2\Edit.cshtml" />
-    <Content Include="Views\UserIntegrationsOld2\Index.cshtml" />
     <Content Include="Scripts\umd\popper.min.js.map" />
     <Content Include="Scripts\umd\popper.js.map" />
     <Content Include="Scripts\umd\popper-utils.min.js.map" />
@@ -341,6 +346,11 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201804171416441_first.resx">
+      <DependentUpon>201804171416441_first.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
